@@ -1,36 +1,36 @@
 import MetaMaskOnboarding from '@metamask/onboarding';
 // eslint-disable-next-line camelcase
 import {
-  encrypt,
+  // encrypt,
   recoverPersonalSignature,
-  recoverTypedSignatureLegacy,
-  recoverTypedSignature,
-  recoverTypedSignature_v4 as recoverTypedSignatureV4,
+  // recoverTypedSignatureLegacy,
+  // recoverTypedSignature,
+  // recoverTypedSignature_v4 as recoverTypedSignatureV4,
 } from 'eth-sig-util';
 import { ethers } from 'ethers';
-import { toChecksumAddress } from 'ethereumjs-util';
-import { getPermissionsDisplayString, stringifiableToHex } from './utils';
-import Constants from './constants.json';
-import {
-  NETWORKS_BY_CHAIN_ID,
-  ERC20_SAMPLE_CONTRACTS,
-  ERC721_SAMPLE_CONTRACTS,
-} from './onchain-sample-contracts';
+// import { toChecksumAddress } from 'ethereumjs-util';
+import { getPermissionsDisplayString } from './utils';
+// import Constants from './constants.json';
+// import {
+//   NETWORKS_BY_CHAIN_ID,
+//   ERC20_SAMPLE_CONTRACTS,
+//   ERC721_SAMPLE_CONTRACTS,
+// } from './onchain-sample-contracts';
 
-const {
-  hstBytecode,
-  hstAbi,
-  piggybankBytecode,
-  piggybankAbi,
-  nftsAbi,
-  nftsBytecode,
-  failingContractAbi,
-  failingContractBytecode,
-  multisigAbi,
-  multisigBytecode,
-  erc1155Abi,
-  erc1155Bytecode,
-} = Constants;
+// const {
+//   hstBytecode,
+//   hstAbi,
+//   piggybankBytecode,
+//   piggybankAbi,
+//   nftsAbi,
+//   nftsBytecode,
+//   failingContractAbi,
+//   failingContractBytecode,
+//   multisigAbi,
+//   multisigBytecode,
+//   erc1155Abi,
+//   erc1155Bytecode,
+// } = Constants;
 
 /**
  * Page
@@ -496,14 +496,14 @@ const handleNewAccounts = (newAccounts) => {
   maxPriorityDiv.style.display = 'none';
 };
 
-let chainIdInt;
-let networkName;
+// let chainIdInt;
+// let networkName;
 
 const handleNewChain = (chainId) => {
   chainIdDiv.innerHTML = chainId;
-  const networkId = parseInt(networkDiv.innerHTML, 10);
-  chainIdInt = parseInt(chainIdDiv.innerHTML, 16) || networkId;
-  networkName = NETWORKS_BY_CHAIN_ID[chainIdInt];
+  // const networkId = parseInt(networkDiv.innerHTML, 10);
+  // chainIdInt = parseInt(chainIdDiv.innerHTML, 16) || networkId;
+  // networkName = NETWORKS_BY_CHAIN_ID[chainIdInt];
 
   if (chainId === '0x1') {
     warningDiv.classList.remove('warning-invisible');
