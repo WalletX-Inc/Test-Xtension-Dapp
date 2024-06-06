@@ -1,8 +1,8 @@
-# MetaMask Test Dapp
+# WalletX Test Dapp
 
 This is a simple test dapp for use in MetaMask e2e tests and manual QA.
 
-Currently hosted [here](https://metamask.github.io/test-dapp/).
+Currently hosted [here](https://getwalletx.github.io/Test-Xtension-Dapp/).
 
 ## Usage
 
